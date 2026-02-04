@@ -6,8 +6,8 @@
 classDiagram
     Race --> Horse
     class Horse{
-        - horseNum: int
         - TRACK_LENGTH: int
+        - horseNum: int
         - horsePosition: int
         + Horse()
         + Horse(int horseNum, int horsePosition)
@@ -15,9 +15,9 @@ classDiagram
         + getHorseNum(): int
         + sethorsePosition(int horsePosition)
         + getHorsePosition(): int
-        + moveOrNot(): int
         + void advance()
         + void printlane()
+        + checkWin(): int
     }
     
     class Race{
@@ -25,7 +25,6 @@ classDiagram
         - Horse horse[]: int array
         + Race()
         + void start()
-        + int turn()
-        + checkWin()
+        + void turn()
     }
 ```
