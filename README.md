@@ -1,9 +1,10 @@
 # CS121_Project5
 
 ## UML Diagram
-```mermaid
-classDiagram
 
+```
+classDiagram
+    Race --> Horse
     class Horse{
         - horseNum: int
         - TRACK_LENGTH: int
