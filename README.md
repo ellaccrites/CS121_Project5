@@ -3,7 +3,7 @@
 ## UML Diagram
 ```mermaid
 classDiagram
-    Race --> Horse
+
     class Horse{
         - horseNum: int
         - TRACK_LENGTH: int
