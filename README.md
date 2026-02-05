@@ -7,68 +7,85 @@ classDiagram
     Race --> Horse
     class Horse{
         - TRACK_LENGTH: int
-        - horseNum: int
-        - horsePosition: int
+        - number: int
+        - position: int
         + Horse()
-        + Horse(int horseNum, int horsePosition)
-        + sethorseNum(int horseNum)
-        + getHorseNum(): int
-        + sethorsePosition(int horsePosition)
-        + getHorsePosition(): int
+        + init(int horseNum, int position)
         + void advance()
         + void printlane()
         + bool checkWin():
     }
-    
     class Race{
         - NUM_HORSES: int
         - Horse horses[]: int array
         + Race()
-        + setHorses(horseNum)
-        + getHorses(): array
         + void start()
-        + void turn()
     }
 ```
 
-## Various Algorithms
+## Horse::horse()
 ```
-In class Horse-->
+position = 0
+number = 0
+```
 
-void advance:
-    create random in (0,1)
-    initialize coin with random value
-    if coin == 1:
-    setHorsePos(getHorsePosition()+1)
+## Horse::init(int index, int trackPosition)
+```
+number = index
+position = trackPosition
+```
 
+## Horse::advance()
+```
+create random int (0,1)
+initialize coin = random value
+position = position + coin
+```
 
-void printLane:
-    print getHorsePosition() number of "."
-    print getHorseNum()
-    print TRACK_LENGTH - ( getHorseNum() + 1) number of "."
+## Horse::printLane()
+```
+print position number of "."
+print number
+print TRACK_LENGTH - (position + 1) number of "."
+```
 
-bool checkWin():
-    if getHorsePosition() = 14:
-        print "Horse number {getHorseNum()} wins!!!"}
+## Horse::checkWin()
+```
+if position = 14:
+        print "Horse number {number} wins!!!"}
         return TRUE
     else:
         return FALSE
+```
 
+## Race::race()
+```
+in header
+    initialze NUM_HORSES = 5 as constant
+in constructor
+    Horse horses[NUM_HORSES]
+    for each horse in horses[]:
+        initialize with init(int index, int position)
+```
 
-in class Race-->
-
-void start():
-    initialize integer keepGoing = 0
-    while keepGoing = 0:
-        Race::race.turn()
+## Race::start():
+```
+initialize integer keepGoing = 0
+while keepGoing = 0:
+    initialize bool win = FALSE
+    for horse in horses[]:
+    advance horse
+    print horses lane
+    if checkWin for horse = TRUE:
+        win = TRUE
+    
+    if win = TRUE:
+        keepGoing = 1
+    else:
+        print "press enter to continue"
         take user input
-
-void turn():
-    for horse in getHorse():
-        Horse::horse.advance()
-        Horse::horse.printLane()
-        Horse::horse.checkWin()
-```     
+```
+                
         
     
 
