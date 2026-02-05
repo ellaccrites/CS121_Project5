@@ -5,31 +5,30 @@
 #include "horse.h"
 
 Race::Race(){
-	/*
 	for(int i = 0; i < NUM_HORSES; i++){
-		Race::horses[i] = Horse();
+		horses[i].init(0, 0);
 	}// end for
-	*/
-	Race::testHorse = Horse();
+	//Race::testHorse = Horse();
 }// end constructor
 
 void Race::start(){
 	int keepGoing = 1;
 	int win = 0;
 	while(keepGoing == 1){
-		/*
+	
 		for(int i; i < NUM_HORSES; i++){
 			horses[i].advance();
 			horses[i].printLane();
 			if(horses[i].checkWin() == true){
 				win = 1;
 			}// end if
-		*/
-		testHorse.advance();
-		testHorse.printLane();
-		if(testHorse.checkWin() == true){
-			win = 1;
-		}
+		
+		//testHorse.advance();
+		//testHorse.printLane();
+		//if(testHorse.checkWin() == true){
+		//	win = 1;
+		//}//end if
+		}//end for
 		if(win == 1){
 			keepGoing = 0;
 		}else{
@@ -38,7 +37,6 @@ void Race::start(){
 			getline(std::cin, next);
 			std::cout << std::endl;
 		}//end if else
-		//}// end for
 	}// end while
 }// end constructor
 
