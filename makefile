@@ -8,7 +8,7 @@ horse.o: horse.h horse.cpp
 	g++ -g -c horse.cpp
 
 clean:
-	rm horseRace
+	rm horseRace main.o horse.o
 
 run:
 	./horseRace
