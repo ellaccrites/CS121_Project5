@@ -17,8 +17,6 @@ void testHorse(){
 	first.printLane();
 	first.advance();
 	first.printLane();
-	first.advance();
-	first.printLane();
 }//end testHorse
 
 

@@ -27,10 +27,10 @@ void Horse::printLane(){
 		std::cout << ".";
 	}// end for
 	std::cout << Horse::number;
-	for(int i = 0; i < 14 - (Horse::position + 1); i++){
+	for(int i = 0; i < 14 - Horse::position; i++){
 		std::cout << ".";
-	std::cout << std::endl;
 	}//end for
+	std::cout << std::endl;
 	/*
 	for(int i = 0; i < 15; i++){
 		std::cout << ".";
