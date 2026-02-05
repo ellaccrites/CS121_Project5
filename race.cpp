@@ -6,7 +6,7 @@
 
 Race::Race(){
 	for(int i = 0; i < NUM_HORSES; i++){
-		horses[i].init(0, 0);
+		horses[i].init(i, 0);
 	}// end for
 	//Race::testHorse = Horse();
 }// end constructor
@@ -15,20 +15,14 @@ void Race::start(){
 	int keepGoing = 1;
 	int win = 0;
 	while(keepGoing == 1){
-	
-		for(int i; i < NUM_HORSES; i++){
+		for(int i = 0; i < NUM_HORSES; i++){
 			horses[i].advance();
 			horses[i].printLane();
 			if(horses[i].checkWin() == true){
 				win = 1;
 			}// end if
-		
-		//testHorse.advance();
-		//testHorse.printLane();
-		//if(testHorse.checkWin() == true){
-		//	win = 1;
-		//}//end if
 		}//end for
+
 		if(win == 1){
 			keepGoing = 0;
 		}else{
