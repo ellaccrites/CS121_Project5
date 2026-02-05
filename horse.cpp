@@ -43,7 +43,7 @@ void Horse::printLane(){
 
 bool Horse::checkWin(){
 	if(Horse::position == 14){
-		std::cout << "Horse number " << Horse::position << " wins!!!" << std::endl;
+		std::cout << "Horse number " << Horse::number << " wins!!!" << std::endl;
 		return true;
 	}else{
 		return false;

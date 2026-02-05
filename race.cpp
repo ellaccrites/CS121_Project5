@@ -4,32 +4,41 @@
 #include "race.h"
 #include "horse.h"
 
-const static int NUM_HORSES = 15;
-
 Race::Race(){
+	/*
 	for(int i = 0; i < NUM_HORSES; i++){
-		horses[i] = Horse();
+		Race::horses[i] = Horse();
 	}// end for
+	*/
+	Race::testHorse = Horse();
 }// end constructor
 
 void Race::start(){
-	int keepGoing = 0;
-	while(keepGoing == 0){
+	int keepGoing = 1;
+	int win = 0;
+	while(keepGoing == 1){
+		/*
 		for(int i; i < NUM_HORSES; i++){
 			horses[i].advance();
 			horses[i].printLane();
-			bool win = false;
 			if(horses[i].checkWin() == true){
-				win = true;
+				win = 1;
 			}// end if
-			if(win == true){
-				keepGoing = 0;
-			}else{
-				std::string next = "\n";
-				std::cout << "Press enter to continue ";
-				getline(std::cin, next);
-				std::cout << std::endl;
-			}//end if else
-		}// end for
+		*/
+		testHorse.advance();
+		testHorse.printLane();
+		if(testHorse.checkWin() == true){
+			win = 1;
+		}
+		if(win == 1){
+			keepGoing = 0;
+		}else{
+			std::string next = "\n";
+			std::cout << "Press enter to continue ";
+			getline(std::cin, next);
+			std::cout << std::endl;
+		}//end if else
+		//}// end for
 	}// end while
-}// end start
+}// end constructor
+

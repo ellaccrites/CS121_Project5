@@ -5,10 +5,12 @@
 
 #include "horse.h"
 
+const static int NUM_HORSES = 5;
+
 class Race {
 	private:
-		const static int NUM_HORSES = 15;
 		Horse horses[NUM_HORSES];
+		Horse testHorse;
 	public:
 		Race();
 		void start();
