@@ -4,25 +4,30 @@
 #include "horse.h"
 #include "race.h"
 
-void testHorse();
-void startRace();
+int betting();
 
 int main(){
-	std::cout << "Test the OOP Horse Race!!!" << std::endl;
-	startRace();
+	int bet = 10;
+	std::cout << "Horse race!! Yay!! Let's go!" << std::endl;
+	bet = betting();
+
+	Race game;
+	game.start();
+	if(bet == game.getWinner()){
+                std::cout << "Congratulations!  Your horse won!" << std::endl;
+        }else{
+		std::cout << "Awww your horse didn't win :( " << std::endl;
+		std::cout << "Try again next time!" << std::endl;
+	}// end if else
+	std::cout << std::endl;
 	return 0;
 }//end main
 
-void testHorse(){
-	Horse first;
-	first.init(0, 0);
-	first.printLane();
-	first.advance();
-	first.printLane();
-}//end testHorse
-
-void startRace(){
-	Race game;
-	game.start();
-}// end startRace
-
+int betting(){
+        int bet = 10;
+	std::cout << "Which horse are you betting on? Pick a horse 0 through 4: ";
+        std::cin >> bet;
+        std::cout << std::endl;
+        std::cin.clear();
+	return bet;
+}// end betting

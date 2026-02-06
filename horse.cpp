@@ -31,14 +31,6 @@ void Horse::printLane(){
 		std::cout << ".";
 	}//end for
 	std::cout << std::endl;
-	/*
-	for(int i = 0; i < 15; i++){
-		std::cout << ".";
-		if(i == Horse::position){
-			std::cout << Horse::position;
-		}// end if
-	}//end for
-	*/
 }//end constructor
 
 bool Horse::checkWin(){

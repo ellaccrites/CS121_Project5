@@ -10,10 +10,11 @@ const static int NUM_HORSES = 5;
 class Race {
 	private:
 		Horse horses[NUM_HORSES];
-		Horse testHorse;
+		int winner = 9;
 	public:
 		Race();
 		void start();
+		int getWinner();
 };
 
 #endif
